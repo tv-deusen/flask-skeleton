@@ -2,8 +2,7 @@ import os
 import tempfile
 import pytest
 
-
-from readit import create_app
+import readit
 from config import Config
 
 @pytest.fixture

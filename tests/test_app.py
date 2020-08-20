@@ -3,7 +3,7 @@ import tempfile
 import pytest
 import pdb
 
-from readit import readit
+import readit
 from config import Config
 
 @pytest.fixture
