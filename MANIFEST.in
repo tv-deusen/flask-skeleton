@@ -1,0 +1,3 @@
+graft readit/static
+graft readit/templates
+global-exclude *.pyc
