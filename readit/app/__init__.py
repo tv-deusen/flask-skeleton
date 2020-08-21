@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask import Flask, g
-from . import auth
+from . import auth, models
 
 def __init_logging(app):
     if not app.debug:
@@ -63,7 +63,7 @@ def create_app(test_config=None):
         app.config.from_object(Config)
     else:
         # Load test config if passed in
-        app.config.from_mapping(test_config)
+        app.config.from_object(test_config)
 
     try:
         # Flask doesn’t create the instance folder automatically,
