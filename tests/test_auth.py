@@ -6,7 +6,8 @@ from flask import g, session
 
 
 def test_register(client, app):
-    assert client.get('/auth/register').status_code == 200
+    with app.app_context():
+        assert client.get('/auth/register').status_code == 200
 
 
 @pytest.mark.parametrize(('username', 'password', 'message'), (
